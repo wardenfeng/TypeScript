@@ -311,7 +311,6 @@ namespace ts {
         customTransformers?: CustomTransformers
     ) {
 
-        let exitStatus: number = ExitStatus.Success;
         if (program.getCompilerOptions().reorderFiles) {
             const sortResult = reorderSourceFiles(program as Program);
             if (sortResult.circularReferences.length > 0) {
@@ -319,7 +318,6 @@ namespace ts {
                 errorText += "error: Find circular dependencies when reordering file :" + sys.newLine;
                 errorText += "    at " + sortResult.circularReferences.join(sys.newLine + "    at ") + sys.newLine + "    at ...";
                 sys.write(errorText + sys.newLine);
-                exitStatus = ExitStatus.DiagnosticsPresent_OutputsGenerated;
             }
         }
 
