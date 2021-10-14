@@ -4444,6 +4444,9 @@ namespace ts {
         /*@internal*/ watch?: boolean;
         esModuleInterop?: boolean;
 
+        /* extra options */
+        reorderFiles?: boolean;
+        
         [option: string]: CompilerOptionsValue | TsConfigSourceFile | undefined;
     }
 
