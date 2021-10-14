@@ -6087,6 +6087,9 @@ namespace ts {
         /* @internal */ showConfig?: boolean;
         useDefineForClassFields?: boolean;
 
+        /* extra options */
+        reorderFiles?: boolean;
+
         [option: string]: CompilerOptionsValue | TsConfigSourceFile | undefined;
     }
 

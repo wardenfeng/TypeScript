@@ -310,6 +310,19 @@ namespace ts {
         emitOnlyDtsFiles?: boolean,
         customTransformers?: CustomTransformers
     ) {
+
+        let exitStatus: number = ExitStatus.Success;
+        if (program.getCompilerOptions().reorderFiles) {
+            const sortResult = reorderSourceFiles(program as Program);
+            if (sortResult.circularReferences.length > 0) {
+                let errorText = "";
+                errorText += "error: Find circular dependencies when reordering file :" + sys.newLine;
+                errorText += "    at " + sortResult.circularReferences.join(sys.newLine + "    at ") + sys.newLine + "    at ...";
+                sys.write(errorText + sys.newLine);
+                exitStatus = ExitStatus.DiagnosticsPresent_OutputsGenerated;
+            }
+        }
+
         const isListFilesOnly = !!program.getCompilerOptions().listFilesOnly;
 
         // First get and report any syntactic errors.

@@ -6,6 +6,7 @@ namespace ts {
     /** The version of the TypeScript compiler release */
     // eslint-disable-next-line @typescript-eslint/no-inferrable-types
     export const version = "4.4.3" as string;
+    export const version_plus = "0.0.4";
 
     /**
      * Type of objects whose values are all of the same type.

@@ -86,7 +86,9 @@ namespace ts {
     }
 
     function printVersion(sys: System) {
-        sys.write(getDiagnosticText(Diagnostics.Version_0, version) + sys.newLine);
+        // sys.write(getDiagnosticText(Diagnostics.Version_0, version) + sys.newLine);
+        sys.write("Version : " + version_plus + sys.newLine);
+        sys.write("typescript-version : " + version + sys.newLine);
     }
 
     function createColors(sys: System) {

@@ -1186,8 +1186,11 @@ namespace ts {
             },
             description: Diagnostics.List_of_language_service_plugins,
             category: Diagnostics.Editor_Support,
-
         },
+        {
+            name: "reorderFiles",
+            type: "boolean"
+        }
     ];
 
     /* @internal */

@@ -43,6 +43,7 @@
         "symbolWalker.ts",
         "checker.ts",
         "visitorPublic.ts",
+        "sorting.ts",
         "sourcemap.ts",
         "transformers/utilities.ts",
         "transformers/destructuring.ts",

@@ -10,6 +10,12 @@
 
 Find others who are using TypeScript at [our community page](https://www.typescriptlang.org/community/).
 
+## 修改
+编译时给源码进行排序。
+### 参考
+https://github.com/domchen/typescript-plus
+https://idom.me/articles/849.html
+
 ## Installing
 
 For the latest stable version:
